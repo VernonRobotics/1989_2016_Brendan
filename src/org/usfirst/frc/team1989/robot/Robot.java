@@ -62,7 +62,7 @@ public class Robot extends IterativeRobot {
 	// CMD List - Stores objects of each class to be run.
 	ArrayList<cmd> cmdlist = new ArrayList<cmd>();
 	
-	ShooterCMD shooter = new ShooterCMD(shootMotor1, shootMotor2, elevator, driveStick, s1);
+	//ShooterCMD shooter = new ShooterCMD(shootMotor1, shootMotor2, elevator, driveStick, s1);
 
 	//ArmCMD arm = new ArmCMD(armMotor1, armMotor2, driveStick);
 	public void robotInit() {
@@ -71,7 +71,7 @@ public class Robot extends IterativeRobot {
 		
 		// Construct CMD List
 		cmdlist.add(aDrive);
-		cmdlist.add(shooter);
+		//cmdlist.add(shooter);
 		//cmdlist.add(arm);
 				
 		// Limit Switches

@@ -9,16 +9,12 @@ public class ArmCMD implements cmd{
 	
 	CANTalon armMotor1;
 	CANTalon armMotor2;
-	DigitalInput armLimit;
-	
-	
 	JsScaled driveStick;
 	
 	
-	public ArmCMD(CANTalon armMotor1, CANTalon armMotor2, DigitalInput armLimit, JsScaled driveStick){
+	public ArmCMD(CANTalon armMotor1, CANTalon armMotor2, JsScaled driveStick){
 			this.armMotor1 = armMotor1;
 			this.armMotor2 = armMotor2;
-			this.armLimit = armLimit;
 			this.driveStick = driveStick;
 	}
 	
@@ -33,10 +29,6 @@ public class ArmCMD implements cmd{
 			armMotor2.set(0.3);
 		}
 		else{
-			armMotor1.set(0.0);
-			armMotor2.set(0.0);
-		}
-		if(armLimit.get() == true){
 			armMotor1.set(0.0);
 			armMotor2.set(0.0);
 		}
